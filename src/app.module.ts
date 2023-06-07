@@ -31,7 +31,7 @@ import { FileModule } from './file/file.module';
         return addTransactionalDataSource(dataSource);
       },
     }),
-    KafkaModule.forRoot({ kafkaConfig, consumerConfig }),
+    KafkaModule.forRoot({ kafkaConfig, consumerConfig ,shouldRunConsumerAsync: true,}),
     AuthModule,
     FileModule,
   ],
